@@ -1,0 +1,37 @@
+# .github/workflows/screener.yml
+name: 💎 PEA Screener Auto
+
+on:
+  schedule:
+    - cron: '0 3 * * 1-5'    # Lun-Ven 4h heure Paris
+  workflow_dispatch:      # Bouton manuel aussi
+
+jobs:
+  screener:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write   # Permet de sauvegarder dans le repo
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Installer les librairies
+      run: pip install yfinance pandas numpy scipy -q
+
+    - name: Lancer le screener
+      run: python screener_auto.py
+
+    - name: Sauvegarder les résultats dans GitHub
+      run: |
+        git config user.name "PEA Screener Bot"
+        git config user.email "bot@pea-screener.local"
+        git add resultats/
+        git diff --staged --quiet || git commit -m "📊 Screener $(date +'%d/%m/%Y')"
+        git push
