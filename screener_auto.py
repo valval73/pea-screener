@@ -529,12 +529,13 @@ def scoring_liquidite(info):
     return None
 
 
-def detecter_value_trap(score_valeur, score_qualite):    """
+def detecter_value_trap(score_valeur, score_qualite):
+    """
     Détection des value traps :
     Entreprise bon marché (score valeur élevé) MAIS qualité faible (score qualité bas)
     = danger classique de l'investisseur value débutant.
     """
-     if score_valeur is None or score_qualite is None:
+    if score_valeur is None or score_qualite is None:
         return False
     # Bon marché (>70/100 sur valeur) mais mauvaise qualité (<40/100 sur qualite)
     return score_valeur > 70 and score_qualite < 40
