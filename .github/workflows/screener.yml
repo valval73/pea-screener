@@ -48,8 +48,7 @@ jobs:
           git config user.email "screener@la-firme.bot"
           git add resultats/ README.md
           git diff --staged --quiet || git commit -m "Screener $(date +'%d/%m/%Y %H:%M') UTC"
-          git push
-
+          git pull --rebase origin main && git push
       - name: Resume de session
         run: |
           echo "## Screener termine" >> $GITHUB_STEP_SUMMARY
