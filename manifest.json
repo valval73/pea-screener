@@ -1,0 +1,26 @@
+{
+  "name": "LA FIRME — Screener PEA",
+  "short_name": "La Firme",
+  "description": "Screener quantitatif PEA Europe · Pro v3",
+  "start_url": "/pea-screener/",
+  "display": "standalone",
+  "background_color": "#050810",
+  "theme_color": "#050810",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "productivity"],
+  "lang": "fr"
+}
