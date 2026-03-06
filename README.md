@@ -1,6 +1,6 @@
 # LA FIRME — PEA Screener Pro v3.0
 
-_Derniere mise a jour : 2026-03-05 21:06 UTC_
+_Derniere mise a jour : 2026-03-06 05:16 UTC_
 
 ## Statistiques
 - **Actions analysees** : 132
@@ -24,16 +24,16 @@ _Derniere mise a jour : 2026-03-05 21:06 UTC_
 ## Signaux Forward-Looking (Top Candidats)
 | Ticker | Révision Proxy | Dist 52S | Accruals | Liquidité | Value Trap |
 |--------|---------------|----------|----------|-----------|------------|
-| GTT.PA | — | -2.3% | None | OK | non |
-| INVE-B.ST | ATTENTION - REVISION NEGATIVE POSSIBLE | -4.0% | None | OK | non |
-| SAMPO.HE | ATTENTION - REVISION NEGATIVE POSSIBLE | -11.5% | None | OK | non |
-| ERIC-B.ST | ATTENTION - REVISION NEGATIVE POSSIBLE | -1.2% | None | OK | non |
-| NOS.LS | ATTENTION - REVISION NEGATIVE POSSIBLE | 0.0% | None | ATTENTION | non |
-| FGR.PA | FORTE HAUSSE ATTENDUE | -6.0% | None | OK | non |
-| ASML.AS | FORTE HAUSSE ATTENDUE | -7.9% | None | OK | non |
-| PRY.MI | FORTE HAUSSE ATTENDUE | -7.1% | None | OK | non |
-| ITX.MC | REVISION POSITIVE | -8.5% | None | OK | non |
-| GALP.LS | — | -2.0% | None | OK | non |
+| GTT.PA | — | -2.3% |  | OK | non |
+| INVE-B.ST | ATTENTION - REVISION NEGATIVE POSSIBLE | -4.0% |  | OK | non |
+| SAMPO.HE | ATTENTION - REVISION NEGATIVE POSSIBLE | -11.5% |  | OK | non |
+| ERIC-B.ST | ATTENTION - REVISION NEGATIVE POSSIBLE | -1.2% |  | OK | non |
+| NOS.LS | ATTENTION - REVISION NEGATIVE POSSIBLE | 0.0% |  | ATTENTION | non |
+| FGR.PA | FORTE HAUSSE ATTENDUE | -6.0% |  | OK | non |
+| ASML.AS | FORTE HAUSSE ATTENDUE | -7.9% |  | OK | non |
+| PRY.MI | FORTE HAUSSE ATTENDUE | -7.1% |  | OK | non |
+| ITX.MC | REVISION POSITIVE | -8.5% |  | OK | non |
+| GALP.LS | — | -2.0% |  | OK | non |
 
 ## Architecture Scoring
 | Pilier | Poids | Criteres principaux |
