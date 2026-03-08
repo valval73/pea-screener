@@ -1,0 +1,59 @@
+name: LA FIRME — Screener Pro v3
+
+on:
+  schedule:
+    # Lun-Ven à 3h00 UTC (4h Paris hiver, 5h Paris été)
+    - cron: '0 3 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Mode execution'
+        required: false
+        default: 'normal'
+        type: choice
+        options:
+          - normal
+          - force_all
+
+permissions:
+  contents: write
+
+jobs:
+  screener:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: |
+          pip install --upgrade pip
+          pip install yfinance pandas numpy requests
+
+      - name: Lancer le screener
+        run: python screener_auto.py
+
+      - name: Sauvegarder les resultats dans GitHub
+        run: |
+          git config user.name  "LA FIRME Bot"
+          git config user.email "screener@la-firme.bot"
+          git add resultats/ README.md
+          git diff --staged --quiet || (git commit -m "Screener $(date +'%d/%m/%Y %H:%M') UTC" && git pull --rebase origin main && git push)
+
+      - name: Resume de session
+        run: |
+          echo "## Screener termine" >> $GITHUB_STEP_SUMMARY
+          echo "Date : $(date +'%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          if [ -f "resultats/candidats.json" ]; then
+            COUNT=$(python -c "import json; data=json.load(open('resultats/candidats.json')); print(len(data))")
+            echo "Candidats : **$COUNT**" >> $GITHUB_STEP_SUMMARY
+          fi
