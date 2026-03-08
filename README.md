@@ -1,7 +1,7 @@
 # LA FIRME — PEA Screener Pro v3.1
-_Mise a jour : 2026-03-08 09:16 UTC_
+_Mise a jour : 2026-03-08 09:28 UTC_
 
-- **Actions analysees** : 269
+- **Actions analysees** : 271
 - **Candidats (>=55)** : 35
 
 | # | Ticker | Nom | Secteur | Score | Q | V | M | S |
