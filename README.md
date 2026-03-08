@@ -1,6 +1,6 @@
 # LA FIRME — PEA Screener Pro v3.0
 
-_Derniere mise a jour : 2026-03-07 14:54 UTC_
+_Derniere mise a jour : 2026-03-08 07:51 UTC_
 
 ## Statistiques
 - **Actions analysees** : 132
